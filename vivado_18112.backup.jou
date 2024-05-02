@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May  1 20:23:54 2024
+# Process ID: 18112
+# Current directory: C:/ECE281/ece281-lab5-jakemiller
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19080 C:\ECE281\ece281-lab5-jakemiller\basic_cpu.xpr
+# Log file: C:/ECE281/ece281-lab5-jakemiller/vivado.log
+# Journal file: C:/ECE281/ece281-lab5-jakemiller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/ECE281/ece281-lab5-jakemiller/basic_cpu.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+add_files -norecurse {C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/controller_fsm.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/ALU_41_MUX.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/regB.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/regA.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/top_21MUX.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/ALU_21_MUX.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/8bit_fulladder.vhd C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/top_MUX.vhd}
+update_compile_order -fileset sources_1
+add_files -norecurse C:/ECE281/ece281-lab5-jakemiller/src/hdl/sevenSegDecoder.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sim_1/new/ALU_tb.vhd
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  C:/ECE281/ece281-lab5-jakemiller/src/hdl/twoscomp_decimal_tb.vhd]
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  C:/ECE281/ece281-lab5-jakemiller/src/hdl/clock_divider_tb.vhd]
+reset_run synth_1
+launch_simulation
