@@ -58,7 +58,6 @@ architecture test_bench of clock_divider_tb is
                                                    -- Effectively, you divide the clk double this 
                                                    -- number (e.g., k_DIV := 2 --> clock divider of 4)
         port ( 	i_clk    : in std_logic;
-                i_reset  : in std_logic;		   -- asynchronous
                 o_clk    : out std_logic		   -- divided (slow) clock
         );
     end component clock_divider;
@@ -67,7 +66,7 @@ architecture test_bench of clock_divider_tb is
 	constant k_clk_period	: time 		:= 20 ns;
 	signal clk			 	: std_logic	:= '0';
 
-	signal reset, slow_clk	: std_logic	:= '0';
+	signal slow_clk	: std_logic	:= '0';
 	
 	-- Set clk divide amount here
 	constant k_clock_divs	: natural	:= 10;
@@ -80,7 +79,6 @@ begin
 	generic map ( k_DIV => k_clock_divs )
 	port map (
 		i_clk   => clk,
-		i_reset => reset,
 		o_clk	=> slow_clk
 	);
 
@@ -102,14 +100,7 @@ begin
 	test_process : process 
 	begin
 		-- clock should have good initial state, so let it divide at least twice
-		wait for k_clk_period * k_clock_divs * 2;
-		
-		-- now hold it in reset to verify that works correctly
-		reset <= '1';
-		wait for k_clk_period * k_clock_divs * 2;
-		
-		-- let the clock divide for rest of sim
-		reset <= '0';		
+		wait for k_clk_period * k_clock_divs * 2;		
 		wait;
 	end process;	
 	-----------------------------------------------------	
