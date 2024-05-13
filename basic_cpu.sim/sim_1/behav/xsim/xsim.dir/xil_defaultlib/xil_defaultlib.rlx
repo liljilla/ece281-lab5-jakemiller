@@ -9,7 +9,7 @@ C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/ALU_41_MUX.vhd,171
 C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/controller_fsm.vhd,1714526854,vhdl,,,,controller_fsm,,,,,,,,
 C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/top_21MUX.vhd,1714519403,vhdl,,,,top_21mux,,,,,,,,
 C:/ECE281/ece281-lab5-jakemiller/basic_cpu.srcs/sources_1/new/top_MUX.vhd,1714522305,vhdl,,,,top_mux,,,,,,,,
-C:/ECE281/ece281-lab5-jakemiller/src/hdl/ALU.vhd,1714607402,vhdl,,,,alu,,,,,,,,
+C:/ECE281/ece281-lab5-jakemiller/src/hdl/ALU.vhd,1714621467,vhdl,,,,alu,,,,,,,,
 C:/ECE281/ece281-lab5-jakemiller/src/hdl/TDM4.vhd,1714607963,vhdl,,,,tdm4,,,,,,,,
 C:/ECE281/ece281-lab5-jakemiller/src/hdl/clock_divider.vhd,1714442751,vhdl,,,,clock_divider,,,,,,,,
 C:/ECE281/ece281-lab5-jakemiller/src/hdl/sevenSegDecoder.vhd,1708638215,vhdl,,,,sevensegdecoder,,,,,,,,
